@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* 通过选择器确定样式的作用范围 */
+        input {
+            display: block;
+            width: 80px; 
+            height: 40px; 
+            background-color: rgb(140, 235, 100); 
+            color: white;
+            border: 3px solid green;
+            font-size: 22px;
+            font-family: '隶书';
+            line-height: 30px;
+            border-radius: 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        引入方式
+        1 行内式,通过元素开始标签的style属性引入, 样式语法为
+        样式名:样式值; 样式名:样式值;
+
+        2 内嵌式
+
+        3 外部样式表
+            可以在项目单独创建css样式文件,专门用于存放CSS样式代码
+        
+     -->
+
+    <input type="button" value="按钮">
+
+    <!-- <input
+      type="button"
+      value="按钮"
+      style="
+        display: block;
+        width: 60px;
+        height: 40px;
+        background-color: rgb(140, 235, 100);
+        color: white;
+        border: 3px solid green;
+        font-size: 22px;
+        font-family: '隶书';
+        line-height: 30px;
+        border-radius: 5px;
+      "
+    /> -->
+  </body>
+</html>
