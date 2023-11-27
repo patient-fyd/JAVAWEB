@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+            1 元素选择器
+                语法：标签名{}
+                + 样式只能作用到同名标签上,其他标签不可用
+                + 相同的标签未必需要相同的样式,会造成样式的作用范围太大
+            
+            2 id选择器 
+                + 根据元素id属性的值确定样式的作用范围
+                + 语法为  #id值 {}
+                + id属性的值在页面上具有唯一性,所有id选择器也只能影响一个元素的样式
+                + 因为id属性值不够灵活,所以使用该选择器的情况较少
+
+            3 class选择器
+                + 根据元素class属性的值确定样式的作用范围
+                + 语法为  .class值 {}
+                + class属性值可以有一个,也可以有多个,多个不同的标签也可以是使用相同的class值
+                + 多个选择器的样式可以在同一个元素上进行叠加
+                + 因为class选择器非常灵活,所以在CSS中,使用该选择器的情况较多
+
+
+         */
+
+      /* input {
+        display: block;
+        width: 80px;
+        height: 40px;
+        background-color: rgb(140, 235, 100);
+        color: white;
+        border: 3px solid green;
+        font-size: 22px;
+        font-family: "隶书";
+        line-height: 30px;
+        border-radius: 5px;
+      } */
+
+      /* #btn1 {
+        display: block;
+        width: 80px;
+        height: 40px;
+        background-color: rgb(140, 235, 100);
+        color: white;
+        border: 3px solid green;
+        font-size: 22px;
+        font-family: "隶书";
+        line-height: 30px;
+        border-radius: 5px;
+      } */
+
+      .shapeClass {
+        width: 80px;
+        height: 40px;
+        border-radius: 5px;
+      }
+
+      .colorClass {
+        background-color: greenyellow;
+        color: aliceblue;
+        border: 3px solid green;
+      }
+
+      .fontClass {
+        font-size: 22px;
+        font-family: "隶书";
+        line-height: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input id="btn1" type="button" value="按钮" />
+    <input id="btn2" class="shapeClass colorClass fontClass type="button" value="按钮" />
+    <input id="btn3" type="button" value="按钮" />
+  </body>
+</html>
