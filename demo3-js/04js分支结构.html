@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 这里的if结构几乎和JAVA中的一样,需要注意的是
+        // + if()中的非空字符串会被认为是true
+        // + if()中的非零数字会被认为是true
+
+        // if ('false') {// 非空字符串 if判断为true
+        //     console.log(true)
+        // } else {
+        //     console.log(false)
+        // }
+        // if ('') {// 长度为0字符串 if判断为false
+        //     console.log(true)
+        // } else {
+        //     console.log(false)
+        // }
+        // if (1) {// 非零数字 if判断为true
+        //     console.log(true)
+        // } else {
+        //     console.log(false)
+        // }
+        // if (0) {
+        //     console.log(true)
+        // } else {
+        //     console.log(false)
+        // }
+
+        var monthStr = prompt("请输入月份", "例如:10 ");
+        var month = Number.parseInt(monthStr)
+        switch (month) {
+            case 3:
+            case 4:
+            case 5:
+                console.log("春季");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                console.log("夏季");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                console.log("秋季");
+                break;
+            case 1:
+            case 2:
+            case 12:
+                console.log("冬季");
+                break;
+            default:
+                console.log("月份有误")
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
