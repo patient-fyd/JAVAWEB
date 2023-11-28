@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn1 {
+                display: block;
+                width: 150px; 
+                height: 40px; 
+                background-color: rgb(245, 241, 129); 
+                color: rgb(238, 31, 31);
+                border: 3px solid rgb(238, 23, 66);
+                font-size: 22px;
+                font-family: '隶书';
+                line-height: 30px;
+                border-radius: 5px;
+            }
+    </style>
+
+    <!-- 
+        引入方式
+        1 内嵌式 在head中通过一对script标签定义脚本代码
+        2 引入外部脚本文件 通过一对script引入外部脚本代码
+
+        + 内部脚本仅能在当前页面上使用,代码复用度不高
+        + 可以将脚本放在独立的js文件中,通过script标签引入外部脚本文件
+        + 一对script标签要么用于定义内部脚本,要么用于引入外部js文件,不能混用
+        + 一个html文档中,可以有多个script标签 
+     -->
+
+     <!-- <script>
+        function suprise(){
+            // 弹窗提示
+            alert("hello 我是惊喜")
+        }
+     </script> -->
+
+     <script src="js/button.js" text="text/javascript"></script>
+</head>
+<body>
+    <button class="btn1" onclick="suprise()">点我有惊喜</button>
+</body>
+</html>
