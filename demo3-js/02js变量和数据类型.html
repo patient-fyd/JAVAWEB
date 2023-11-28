@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        > 数值类型
+
+        + 数值类型统一为 number,不区分整数和浮点数
+
+        > 字符串类型
+
+        + 字符串类型为 string 和JAVA中的String相似,JS中不严格区分单双引号,都可以用于表示字符串
+
+        > 布尔类型
+
+        + 布尔类型为boolean 和Java中的boolean相似,但是在JS的if语句中,非空字符串会被转换为'真',非零数字也会被认为是'真'
+
+        > 引用数据类型
+
+        + 引用数据类型对象是Object类型, 各种对象和数组在JS中都是Object类型
+
+        > function类型
+
+        + JS中的各种函数属于function数据类型
+
+        > 命名未赋值
+
+        + js为弱类型语言,统一使用 var 声明对象和变量,在赋值时才确定真正的数据类型,变量如果只声明没有赋值的话,数据类型为undefined
+
+        > 赋予NULL值
+
+        + 在JS中,如果给一个变量赋值为null,其数据类型是Object, 可以通过typeof关键字判断数据类型
+     -->
+    <script>
+//      1 弱类型变量,可以统一声明成var
+//      2 var声明的变量可以再次声明
+//      3 变量可以使用不同的数据类型多次赋值
+//      4 JS的语句可以以; 结尾,也可以不用;结尾
+//      5 变量标识符严格区分大小写
+//      6 标识符的命名规则参照JAVA
+//      7 如果使用了 一个没有声明的变量,那么运行时会报uncaught ReferenceError: *** is not defined   at index.html:行号:列号
+//      8 如果一个变量只声明,没赋值,那么值是undefined
+        var i = 10
+        var str = "asdf"
+        console.log(str)
+        console.log(i)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
