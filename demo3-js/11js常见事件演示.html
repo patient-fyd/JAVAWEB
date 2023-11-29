@@ -5,57 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        function fun1(){
-            alert("按钮被点击了");
+      function fun1() {
+        alert('按钮被点击了');
+      }
+
+      function fun2() {
+        alert('按钮被双击了');
+      }
+
+      function fun3() {
+        console.log('鼠标悬停了');
+      }
+
+      function fun4() {
+        console.log('鼠标移动了');
+      }
+
+      function fun5() {
+        console.log('鼠标离开了');
+      }
+
+      function fun6() {
+        console.log('按键按下');
+      }
+
+      function fun7() {
+        console.log('按键抬起');
+      }
+
+      // 事件的绑定方式
+      // 1. 直接绑定
+      // 2. 通过DOM编程动态绑定
+
+      // 常见的事件
+      // 1. 鼠标事件 onclick点击 ondbclick双击 onmouseover移入 onmousemove移动 onmouseleave离开
+      // 2. 键盘事件 onkeydown键盘按下 onkeyup键盘抬起
+      // 3. 表单事件 onfocus获得焦点 onblur失去焦点 onchange文本发生改变 onsubmit表单提交 onreset表单重置
+      // 4. 网页事件 onload页面加载 onloadend页面加载结束
+
+      function testFocus() {
+        console.log('获得焦点了');
+      }
+
+      function testBlur() {
+        console.log('失去焦点了');
+      }
+
+      function testChange() {
+        console.log('文本发生改变了');
+      }
+
+      function testChange2(value) {
+        console.log('选项改变为' + value);
+      }
+
+      function testSubmit() {
+        /* 
+            弹窗的三种方式
+            1. alert() 信息提示框
+            2. confirm() 确认框
+            3. prompt() 输入框
+         */
+        var flag = confirm('确定要提交吗？');
+        if (flag) {
+          alert('提交成功');
+        } else {
+          alert('提交失败');
+          // 在这里有机会阻止表单的提交
+          event.preventDefault(); //阻止默认行为
         }
+      }
 
-        function fun2(){
-            alert("按钮被双击了");
-        }
-
-        function fun3(){
-            console.log("鼠标悬停了");
-        }
-
-        function fun4(){
-            console.log("鼠标移动了");
-        }
-
-        function fun5(){
-            console.log("鼠标离开了");
-        }
-
-        function fun6(){
-            console.log("按键按下");
-        }
-
-        function fun7(){
-            console.log("按键抬起");
-        }
-
-
-        // 事件的绑定方式
-        // 1. 直接绑定
-        // 2. 通过DOM编程动态绑定
-
-        // 常见的事件
-        // 1. 鼠标事件 onclick点击 ondbclick双击 onmouseover移入 onmousemove移动 onmouseleave离开
-        // 2. 键盘事件 onkeydown键盘按下 onkeyup键盘抬起
-        // 3. 表单事件
+      function testReset() {
+        alert('表单要重置了');
+      }
     </script>
   </head>
   <body>
-    <input 
-        type="button" 
-        value="按钮" 
-        onclick="fun1()"
-        ondblclick="fun2()"
+    <form
+      action="01js引入方式.html"
+      method="get"
+      onsubmit="testSubmit()"
+      onreset="testReset()"
+    >
+      用户昵称：<input
+        type="text"
+        name="username"
+        onfocus="testFocus()"
+        onblur="testBlur()"
+        onchange="testChange()"
+      /><br />
+      登录账号：<input type="text" /><br />
+      选择籍贯：
+      <select onchange="testChange2(this.value)">
+        <option value="1">北京</option>
+        <option value="2">上海</option>
+        <option value="3">广州</option>
+      </select><br />
+      <input type="submit" value="注册" />
+      <input type="reset" value="清空" />
+    </form>
+
+    <hr />
+    <input type="button" value="按钮" onclick="fun1()" ondblclick="fun2()" />
+
+    <br />
+    <img
+      src="img/spring-boot.png"
+      onmouseover="fun3()"
+      onmousemove="fun4()"
+      onmouseleave="fun5()"
     />
 
-    <br>
-    <img src="img/spring-boot.png" onmouseover="fun3()" onmousemove="fun4()" onmouseleave="fun5()" />
-
-    <br>
-    <input type="text" onkeydown="fun6()" onkeyup="fun7()">
+    <br />
+    <input type="text" onkeydown="fun6()" onkeyup="fun7()" />
   </body>
 </html>
