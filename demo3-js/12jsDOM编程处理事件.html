@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 事件的绑定方式
+      // 1. 直接绑定
+      // 2. 通过DOM编程动态绑定
+
+      // 常见的事件
+      // 1. 鼠标事件 onclick点击 ondbclick双击 onmouseover移入 onmousemove移动 onmouseleave离开
+      // 2. 键盘事件 onkeydown键盘按下 onkeyup键盘抬起
+      // 3. 表单事件 onfocus获得焦点 onblur失去焦点 onchange文本发生改变 onsubmit表单提交 onreset表单重置
+      // 4. 网页事件 onload页面加载 onloadend页面加载结束
+    </script>
+
+    <script>
+      window.onload = function () {
+        // 为div1绑定单机事件
+        var div1 = document.getElementById('d1');
+        div1.onclick = function () {
+          div1.style.backgroundColor = 'red';
+        };
+
+        // 通过dom获得要操作的元素
+        document.getElementById('btn1').onclick = function () {
+          //alert('按钮被点击了');
+          // 通过dom编程触发事件
+          // 触发div的单机事件
+          div1.onclick();
+        };
+      };
+    </script>
+    <style>
+      .div1 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1" class="div1"></div>
+    <button id="btn1">按钮</button>
+  </body>
+</html>
