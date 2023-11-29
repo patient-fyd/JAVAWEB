@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // js中的对象
+        // 1. 数组
+        //  数组的创建方式
+        //  数组的API
+
+        var arr = new Array("a", "b", "c");
+        console.log(arr);
+        console.log(arr.length);
+
+        //向数组中添加元素
+        arr.push("d");
+        console.log(arr);
+        console.log(arr.length);
+
+        var fruits = ["苹果", "香蕉", "橘子"];
+        var fruits2 = ["苹果2", "香蕉2", "橘子2"];
+        //concat() 方法用于连接两个或多个数组
+        var fruitsAll = fruits.concat(fruits2);
+        console.log(fruitsAll);
+
+        // 反转数组
+        fruitsAll.reverse();
+        console.log(fruitsAll);
+
+        // 转换成字符串
+        console.log(fruitsAll.join("-"));
+
+        // 截取数据
+        console.log(fruitsAll.slice(1, 3)); 
+        //
+        console.log(fruitsAll.slice(1));
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
