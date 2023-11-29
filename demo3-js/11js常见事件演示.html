@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function fun1(){
+            alert("按钮被点击了");
+        }
+
+        function fun2(){
+            alert("按钮被双击了");
+        }
+
+        function fun3(){
+            console.log("鼠标悬停了");
+        }
+
+        function fun4(){
+            console.log("鼠标移动了");
+        }
+
+        function fun5(){
+            console.log("鼠标离开了");
+        }
+
+        function fun6(){
+            console.log("按键按下");
+        }
+
+        function fun7(){
+            console.log("按键抬起");
+        }
+
+
+        // 事件的绑定方式
+        // 1. 直接绑定
+        // 2. 通过DOM编程动态绑定
+
+        // 常见的事件
+        // 1. 鼠标事件 onclick点击 ondbclick双击 onmouseover移入 onmousemove移动 onmouseleave离开
+        // 2. 键盘事件 onkeydown键盘按下 onkeyup键盘抬起
+        // 3. 表单事件
+    </script>
+  </head>
+  <body>
+    <input 
+        type="button" 
+        value="按钮" 
+        onclick="fun1()"
+        ondblclick="fun2()"
+    />
+
+    <br>
+    <img src="img/spring-boot.png" onmouseover="fun3()" onmousemove="fun4()" onmouseleave="fun5()" />
+
+    <br>
+    <input type="text" onkeydown="fun6()" onkeyup="fun7()">
+  </body>
+</html>
