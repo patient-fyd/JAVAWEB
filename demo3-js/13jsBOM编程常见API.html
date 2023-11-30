@@ -12,6 +12,12 @@
             alert()
             confirm()
             prompt()
+        history
+        location
+        sessionStorage 用于存储一些会话级数据（浏览器关闭清除）
+        localStorage 用于存储一些会话级数据（浏览器关闭不清除）
+
+          
          */
       function test() {
         console.log(alert('hello world'));
@@ -30,9 +36,62 @@
           console.log('hello world');
         }, 2000);
       }
+
+      function fun1() {
+        // 向后翻页
+        //history.back();
+        history.go(-1);
+      }
+
+      function fun2() {
+        // 向前翻页
+        //history.forward();
+        history.go(1);
+      }
+
+      function func() {
+        // 改变地址栏的url
+        window.location.href = 'https://www.baidu.com';
+      }
+
+      function func1() {
+        // 向sessionStorage中存储数据
+        sessionStorage.setItem('key1', 'value1');
+        // 向localStorage中存储数据
+        localStorage.setItem('key2', 'value2');
+      }
+
+      function func2() {
+        // 从sessionStorage中读取数据
+        console.log(sessionStorage.getItem('key1'));
+        // 从localStorage中读取数据
+        console.log(localStorage.getItem('key2'));
+      }
+
+      function func3() {
+        // 从sessionStorage中删除数据
+        sessionStorage.removeItem('key1');
+        // 从localStorage中删除数据
+        localStorage.removeItem('key2');
+      }
     </script>
   </head>
   <body>
+
+    <button onclick="func1()">存储数据</button>
+    <button onclick="func2()">读取数据</button>
+    <button onclick="func3()">清空数据</button>
+
+    <hr />
+
+    <button onclick="func()">百度</button>
+
+    <hr />
+    <button onclick="fun1()">上一页</button>
+    <button onclick="fun2()">下一页</button>
+    <a href="https://www.baidu.com">百度</a>
+    <hr />
+
     <button onclick="test()">信息提示框</button>
     <button onclick="test2()">信息确认框</button>
     <button onclick="test3()">信息输入框</button>
