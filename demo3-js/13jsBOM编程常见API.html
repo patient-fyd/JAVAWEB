@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      /* 
+        window 对象是浏览器提供给我们的
+            三种弹窗方式
+            alert()
+            confirm()
+            prompt()
+         */
+      function test() {
+        console.log(alert('hello world'));
+      }
+
+      function test2() {
+        console.log(confirm('hello world'));
+      }
+
+      function test3() {
+        console.log(prompt('hello world'));
+      }
+
+      function test4() {
+        window.setTimeout(function () {
+          console.log('hello world');
+        }, 2000);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="test()">信息提示框</button>
+    <button onclick="test2()">信息确认框</button>
+    <button onclick="test3()">信息输入框</button>
+    <button onclick="test4()">两秒后向控制台打印</button>
+  </body>
+</html>
