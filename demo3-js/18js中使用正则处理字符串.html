@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        验证 
+         */
+
+        // // 定义一个正则表达式
+        // var reg = /o/
+        // // 定义一个字符串
+        // var str = 'hello world'
+        // // 校验是否符合正则规则
+        // console.log(reg.test(str))
+
+
+
+        // // 创建一个最简单的正则表达式对象
+        // var reg = /o/;
+        // // 创建一个字符串对象作为目标字符串
+        // var str = 'Hello World!';
+        // // 在目标字符串中查找匹配的字符，返回匹配结果组成的数组
+        // var resultArr = str.match(reg);
+        // // 数组长度为1
+        // console.log("resultArr.length=" + resultArr.length);
+
+        // // 数组内容是o
+        // console.log("resultArr[0]=" + resultArr[0]);
+
+
+        // // 创建一个最简单的正则表达式对象
+        // var reg = /o/;
+        // // 创建一个字符串对象作为目标字符串
+        // var str = 'Hello World!';
+        // var newStr = str.replace(reg, '@');
+        // // 只有第一个o被替换了，说明我们这个正则表达式只能匹配第一个满足的字符串
+        // console.log("str.replace(reg)=" + newStr);//Hell@ World!
+
+        // // 原字符串并没有变化，只是返回了一个新字符串
+        // console.log("str=" + str);//str=Hello World!
+
+
+        // var str1 = 'java love me'
+        // var str2 = 'I love java'
+
+        // var reg1 = /^java/i
+        // var reg2 = /java$/
+        // var reg3 = /^java$/
+
+        // console.log(reg.test(str1))
+        // console.log(reg.test(str2))
+
+        /* 
+        校验用户名是否合法
+        
+        1 必须是字母开头
+        2 长度必须是6-10位
+        3 后面的其他字符可以说大小写字母，数字
+        */
+
+        var str = 'G'
+        var reg = /^[a-zA-Z][a-zA-Z0-9_]{5,9}$/
+        console.log(reg.test(str))
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
