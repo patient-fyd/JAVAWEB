@@ -8,21 +8,21 @@
 
 -->
 <jdbc>
-    <dev>
+    <dev id="001">
         <username>root</username>
         <password>123456</password>
         <driver>com.mysql.cj.jdbc.Driver</driver>
         <url>jdbc:mysql://localhost:3306/</url>
     </dev>
 
-    <test>
+    <test id="002">
         <username>root</username>
         <password>123456</password>
         <driver>com.mysql.cj.jdbc.Driver</driver>
         <url>jdbc:mysql://localhost:3306/</url>
     </test>
 
-    <formal>
+    <formal id="003">
         <username>root</username>
         <password>123456</password>
         <driver>com.mysql.cj.jdbc.Driver</driver>
