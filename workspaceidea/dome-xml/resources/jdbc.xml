@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+1 根标签只能有一个
+2 第一永远是 <?xml version="1.0" encoding="utf-8" ?>
+3 xml有约束
+4   dtd 简单 上手快 约束不够细致
+    schema 复杂 上手慢
+
+-->
+<jdbc>
+    <dev>
+        <username>root</username>
+        <password>123456</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/</url>
+    </dev>
+
+    <test>
+        <username>root</username>
+        <password>123456</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/</url>
+    </test>
+
+    <formal>
+        <username>root</username>
+        <password>123456</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/</url>
+    </formal>
+
+</jdbc>
