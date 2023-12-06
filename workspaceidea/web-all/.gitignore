@@ -1,0 +1,47 @@
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+# 忽略所有的 .idea 文件夹
+.idea/
+
+# 忽略 .iml 文件
+*.iml
+
+# 忽略 .ipr 文件
+*.ipr
+
+# 忽略 .iws 文件
+*.iws
+
+# 忽略 .xml 文件
+*.xml
+
+# 忽略 .log 文件
+*.log
