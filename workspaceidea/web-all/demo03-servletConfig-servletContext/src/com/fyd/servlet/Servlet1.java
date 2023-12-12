@@ -56,5 +56,13 @@ public class Servlet1 extends HttpServlet {
             String param = initParameterNames1.nextElement();
             System.out.println("param = " + param);
         }
+
+        // 作为域对象，一定有API
+        // getAttribute(String name) 根据名字获取域对象
+        // setAttribute(String name, Object o) 设置域对象
+        // removeAttribute(String name) 删除域对象
+
+        servletContext.setAttribute("username2", "lisi");
+        servletContext.removeAttribute("username2");
     }
 }

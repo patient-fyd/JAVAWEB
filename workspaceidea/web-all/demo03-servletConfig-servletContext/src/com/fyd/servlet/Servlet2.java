@@ -56,5 +56,9 @@ public class Servlet2 extends HttpServlet {
             String param = initParameterNames1.nextElement();
             System.out.println("param = " + param);
         }
+
+        String username2 = (String) servletContext.getAttribute("username2");
+        System.out.println(username2);
+
     }
 }
