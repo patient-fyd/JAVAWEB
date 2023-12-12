@@ -1,6 +1,7 @@
 package com.fyd.servlet;
 
 import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebInitParam;
 import jakarta.servlet.annotation.WebServlet;
@@ -26,6 +27,7 @@ import java.util.Enumeration;
 public class Servlet2 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("---------------servlet2获取servletConfig------------------");
         ServletConfig servletConfig = getServletConfig();
         // 获取初始配置信息即可
         // 根据参数名获取参数值
@@ -38,6 +40,20 @@ public class Servlet2 extends HttpServlet {
 
         while (initParameterNames.hasMoreElements()) {
             String param = initParameterNames.nextElement();
+            System.out.println("param = " + param);
+        }
+
+        System.out.println("---------------servlet1获取servletContext------------------");
+        ServletContext servletContext = getServletContext();
+        ServletContext servletContext1 = servletConfig.getServletContext();
+        ServletContext servletContext2 = req.getServletContext();
+
+        String encoding = servletContext.getInitParameter("encoding");
+        System.out.println("encoding = " + encoding);
+
+        Enumeration<String> initParameterNames1 = servletContext.getInitParameterNames();
+        while (initParameterNames1.hasMoreElements()) {
+            String param = initParameterNames1.nextElement();
             System.out.println("param = " + param);
         }
     }
