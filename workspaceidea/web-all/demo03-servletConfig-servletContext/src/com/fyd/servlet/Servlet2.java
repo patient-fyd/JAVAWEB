@@ -2,6 +2,8 @@ package com.fyd.servlet;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebInitParam;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -14,6 +16,13 @@ import java.util.Enumeration;
  * Date: 2023/12/12  9:40
  * Description:
  */
+@WebServlet(
+        urlPatterns = "/servlet2",
+        initParams = {
+                @WebInitParam(name = "keya", value = "value2A"),
+                @WebInitParam(name = "keyb", value = "value2B")
+        }
+)
 public class Servlet2 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
