@@ -32,7 +32,7 @@ public class Servlet6 extends HttpServlet {
         // 获得一个向响应体中输入文本字符输出流
         PrintWriter writer = resp.getWriter();
         writer.write(info);
-        
+
         // 获得一个向响应体中输入二进制信息的字节输出流
         ServletOutputStream outputStream = resp.getOutputStream();
 
