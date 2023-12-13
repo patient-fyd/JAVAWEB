@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <!--
+        1 配置servlet类，起一个别名
+           servlet-class  告诉tomcat对应的要实例化的servlet类
+           servlet-name   用于关联请求的映射路径
+    -->
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.fyd.servlet.UserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/UserServlet</url-pattern>
+    </servlet-mapping>
+
+<!--    一个servlet-name可以同时对应多个url-pattern
+        一个servlet可以对应多个servlet-mapping
+
+        一个url-pattern不能对应多个servlet-name
+
+            /        表示通配所有资源,不包括jsp文件
+            /*       表示通配所有资源,包括jsp文件
+            /a/*     匹配所有以a前缀的映射路径
+            *.action 匹配所有以action为后缀的映射路径
+-->
+<!--    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>com.fyd.servlet.Servlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/s1</url-pattern>
+    </servlet-mapping>-->
+</web-app>
