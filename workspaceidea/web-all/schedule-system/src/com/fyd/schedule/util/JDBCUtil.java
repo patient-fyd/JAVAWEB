@@ -17,7 +17,7 @@ public class JDBCUtil {
     static{
         // 可以帮助我们读取.properties配置文件
         Properties properties =new Properties();
-        InputStream resourceAsStream = JDBCUtil.class.getClassLoader().getResourceAsStream("resources/jdbc.properties");
+        InputStream resourceAsStream = JDBCUtil.class.getClassLoader().getResourceAsStream("jdbc.properties");
         try {
             properties.load(resourceAsStream);
         } catch (IOException e) {

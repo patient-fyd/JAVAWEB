@@ -19,7 +19,7 @@ public class TestBaseDao {
     public void testBaseQueryObject() {
         // 查询用户数据 查询结果是单行单列的
         String sql = "select count(1) from sys_user";
-        Long count = baseDao.baseQueryObject(Long.class, sql);
+        Long count = baseDao.baseQueryObject(Long.class,sql);
         System.out.println(count);
     }
 }
