@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 /**
  * Author: patient.fyd@gmail.com
@@ -14,16 +15,7 @@ import java.io.IOException;
  * Description:
  */
 @WebServlet("/schedule/*")
-public class SysScheduleController extends HttpServlet {
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // 判断此次请求是要CRUD哪一个
-        String uri = req.getRequestURI();
-        String[] split = uri.split("/");
-        String path = split[split.length - 1];
-
-
-    }
+public class SysScheduleController extends BaseController {
 
 
     protected void add(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
