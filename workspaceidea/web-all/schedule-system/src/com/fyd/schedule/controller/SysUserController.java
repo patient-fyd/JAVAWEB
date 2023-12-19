@@ -3,6 +3,7 @@ package com.fyd.schedule.controller;
 import com.fyd.schedule.pojo.SysUser;
 import com.fyd.schedule.service.SysUserService;
 import com.fyd.schedule.service.impl.SysUserServiceImpl;
+import com.fyd.schedule.util.MD5Util;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,6 +20,34 @@ import java.io.IOException;
 public class SysUserController extends BaseController {
 
     private SysUserService sysUserService = new SysUserServiceImpl();
+
+    /**
+     * 接收用户登录请求，完成登录业务接口
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
+    protected void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 接收用户名和密码
+        String username = req.getParameter("username");
+        String userPwd = req.getParameter("userPwd");
+
+        // 调用服务层方法
+        // 根据用户名查询用户信息
+        SysUser loginUser = sysUserService.findByUsername(username);
+        if (null == loginUser){
+            // 跳转到用户名有误提示页
+            resp.sendRedirect("/loginUsernameError.html");
+        } else if (MD5Util.encrypt(userPwd).equals(loginUser.getUserPwd())) {
+            // 判断密码是否匹配
+            // 跳转到密码有误提示页
+            resp.sendRedirect("/loginUserPwdError.html");
+        } else {
+            // 跳转到登录成功提示页
+            resp.sendRedirect("/showSchedule.html");
+        }
+    }
 
     /**
      * 接收用户注册请求的业务处理方法

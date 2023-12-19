@@ -20,4 +20,14 @@ public class SysUserServiceImpl implements SysUserService {
         // 调用dao层方法
         return sysUserDao.addSysUser(sysUser);
     }
+
+    /**
+     * 根据用户名获得完整用户信息的方法
+     * @param username 要查询的用户名
+     * @return 找到了返回SysUser对象，找不到返回null
+     */
+    @Override
+    public SysUser findByUsername(String username) {
+        return sysUserDao.findByUsername(username);
+    }
 }
