@@ -34,6 +34,7 @@
         <jarDirectory url="file://$MODULE_DIR$/web/WEB-INF/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="servlet-api" level="project" />
   </component>
   <component name="SonarLintModuleSettings">
     <option name="uniqueId" value="ab82e07f-ae8e-48d2-bb57-6b30f593748e" />
