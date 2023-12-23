@@ -21,4 +21,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 10.1.7" level="application_server_libraries" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="c3e34d03-3bd8-45a8-8484-512a464b280e" />
+  </component>
 </module>

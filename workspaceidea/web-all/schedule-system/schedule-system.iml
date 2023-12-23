@@ -63,4 +63,7 @@
     </orderEntry>
     <orderEntry type="library" name="repository" level="project" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="8f57906e-1a30-4d65-aaa6-584b91d2c625" />
+  </component>
 </module>
