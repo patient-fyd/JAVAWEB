@@ -8,6 +8,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
@@ -44,6 +45,9 @@ public class SysUserController extends BaseController {
             // 跳转到密码有误提示页
             resp.sendRedirect("/loginUserPwdError.html");
         } else {
+            // 登录成功后，将登录的用户信息放入session
+            HttpSession session = req.getSession();
+            session.setAttribute("sysUser", loginUser);
             // 跳转到登录成功提示页
             resp.sendRedirect("/showSchedule.html");
         }
