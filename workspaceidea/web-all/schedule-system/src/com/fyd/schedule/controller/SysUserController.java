@@ -7,6 +7,7 @@ import com.fyd.schedule.pojo.SysUser;
 import com.fyd.schedule.service.SysUserService;
 import com.fyd.schedule.service.impl.SysUserServiceImpl;
 import com.fyd.schedule.util.MD5Util;
+import com.fyd.schedule.util.WebUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -46,11 +47,7 @@ public class SysUserController extends BaseController {
             result = Result.build(null, ResultCodeEnum.USERNAME_USED);
         }
         // 将result对象转换为json串响应给客户端
-        ObjectMapper objectMapper = new ObjectMapper();
-        String json = objectMapper.writeValueAsString(result);
-        // 告诉客户端响应的是json
-        resp.setContentType("application/json;charset=utf-8");
-        resp.getWriter().write(json);
+        WebUtil.writeJson(resp, result);
 
 
     }
