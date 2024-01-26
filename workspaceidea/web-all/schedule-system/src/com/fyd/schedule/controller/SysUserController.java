@@ -1,5 +1,8 @@
 package com.fyd.schedule.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fyd.schedule.common.Result;
+import com.fyd.schedule.common.ResultCodeEnum;
 import com.fyd.schedule.pojo.SysUser;
 import com.fyd.schedule.service.SysUserService;
 import com.fyd.schedule.service.impl.SysUserServiceImpl;
@@ -36,11 +39,19 @@ public class SysUserController extends BaseController {
         // 调用服务层业务处理方法查询该该用户名是否有对应的用户
         SysUser sysUser = sysUserService.findByUsername(username);
 
-        // 如果有，响应已占有
-        String info = "可用";
+        Result result = Result.ok(null);
+
+
         if (null != sysUser){
-            info = "已占用";
+            result = Result.build(null, ResultCodeEnum.USERNAME_USED);
         }
+        // 将result对象转换为json串响应给客户端
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writeValueAsString(result);
+        // 告诉客户端响应的是json
+        resp.setContentType("application/json;charset=utf-8");
+        resp.getWriter().write(json);
+
 
     }
 

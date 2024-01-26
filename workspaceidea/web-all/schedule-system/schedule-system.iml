@@ -31,5 +31,16 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jackson-annotations-2.13.2">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/jackson-annotations-2.13.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/jackson-core-2.13.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/jackson-databind-2.13.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
